@@ -1,4 +1,4 @@
 export type BottomTabParamList = {
-  Home: undefined;
-  Favorite: undefined;
+  'All Cats': undefined;
+  'Cats I Like': undefined;
 };

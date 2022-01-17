@@ -8,6 +8,7 @@ import colors from '../styles/colors';
 import Favorite from '../screens/favorite';
 import Home from '../screens/home';
 import { NavigationContainer } from '@react-navigation/native';
+import { Fonts } from '../assets/fonts';
 
 const BottomTabsNavigator = createBottomTabNavigator<BottomTabParamList>();
 
@@ -44,7 +45,9 @@ function BottomTabs() {
           },
           tabBarActiveTintColor: colors.black,
           tabBarLabelStyle: {
-            fontSize: hp(12),
+            fontSize: hp(15),
+            fontFamily: Fonts.SFProDisplayBold,
+            paddingBottom: hp(10),
           },
         }}>
         <BottomTabsNavigator.Screen

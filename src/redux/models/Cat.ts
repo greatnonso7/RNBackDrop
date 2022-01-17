@@ -12,15 +12,17 @@ export const Cat = createModel<RootModel>()({
   reducers: reducers,
   effects: dispatch => ({
     async getAllCat(payload: number, _state) {
-      dispatch.Car.setError(false);
+      dispatch.Cat.setError(false);
 
       try {
         const api = await CatApi.getCats(payload);
         if (api) {
-          console.log(api);
+          dispatch.Cat.setState({
+            cats: api,
+          });
         }
       } catch (error) {
-        dispatch.Cat.handleError(error);
+        console.log(error);
       }
     },
   }),
